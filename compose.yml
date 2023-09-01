@@ -1,0 +1,17 @@
+services:
+  almalinux:
+    build: ./
+    tty: true
+    container_name: almalinux
+    hostname: almalinux
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      DISPLAY: $DISPLAY
+    # Login as non-root user (docker)
+    # because mpirun does not work as root
+    # except if --allow-run-as-root option is used
+      GID: 1000
+      UID: 1000
+      USER: docker
+    user: docker
