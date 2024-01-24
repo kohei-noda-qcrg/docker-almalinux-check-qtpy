@@ -22,10 +22,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
 ${HOME}/.pyenv/bin/pyenv install 3.11.5 && ${HOME}/.pyenv/bin/pyenv global 3.11.5
 
 # Install dirac_caspt2_input_generator
-RUN git clone https://github.com/kohei-noda-qcrg/dirac_caspt2_input_generator.git && \
-cd dirac_caspt2_input_generator && \
-${HOME}/.pyenv/shims/pip install -r requirements.txt
-WORKDIR /home/${UNAME}/dirac_caspt2_input_generator
+RUN pip install -U dcaspt2_input_generator
 
 # Install dependencies for dirac_caspt2_input_generator
 RUN sudo yum install -y mesa-libGL.x86_64 mesa-libEGL.x86_64 libwayland-cursor.x86_64 libxkbcommon-x11.x86_64 xcb-util-image.x86_64 \
