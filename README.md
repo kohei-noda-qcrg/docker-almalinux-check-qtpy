@@ -15,5 +15,5 @@ cd docker-almalinux-check-qtpy
 docker compose up -d
 docker compose exec -it almalinux /bin/bash
 # in the container
-python main.py
+dcaspt2_input_generator
 ```
