@@ -2,7 +2,7 @@
 
 This is a simple docker image to check the dependencies of the qtpy package on AlmaLinux 8.
 
-## Installation
+## Download
 
 ```bash
 git clone https://github.com/kohei-noda-qcrg/docker-almalinux-check-qtpy.git
